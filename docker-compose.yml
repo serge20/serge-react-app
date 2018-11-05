@@ -1,0 +1,15 @@
+version: '2'
+services: 
+  nginx: 
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./build:/var/www/html
+    networks:
+      - sd-net
+    environment:
+      APP_ENV: ${APP_ENV}
+networks:
+  sd-net:
+    driver: "bridge"
