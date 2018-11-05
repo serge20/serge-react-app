@@ -1,5 +1,5 @@
 pipeline:
-  frontend:
+  build:
     image: node
     commands:
       - npm install
